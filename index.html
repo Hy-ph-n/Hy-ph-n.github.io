@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - My Flask Application</title>
+    <link rel="stylesheet" type="text/css" href="/static/content/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
+    <script src="/static/scripts/modernizr-2.6.2.js"></script>
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand">My Experience: TSTC</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="{{ url_for('hobbies') }}">Hobbies</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="jumbotron">
+        <h1>Welcome to David's program showcase!</h1>
+        <p class="lead">I am David Bowen, a college student finishing up his second and final year at TSTC. I major in computer programming, and it's been an exciting experience! During my time here, I've learnt so much and aquired many skills I plan to take with me into a satisfying career.</p>
+        <p>I plan on graduating Fall 2024, the semester where I'll be taking my final course. It'll be scary to move on from the college I'm familiar with, but I want to make the most of what I've learnt and apply it elsewhere. I've been taught so much here over just two years, and my helpful
+           instructors have made sure learning is not a frustrating process. I've included so videos displaying work that I am proud of</p>
+    </div>
+
+<    div class="center">
+        <img src="static/image/TSTC Waco.jpg"/>
+    </div>
+
+    <script src="/static/scripts/jquery-1.10.2.js"></script>
+    <script src="/static/scripts/bootstrap.js"></script>
+    <script src="/static/scripts/respond.js"></script>
+    {% block scripts %}{% endblock %}
+
+</body>
+</html>
