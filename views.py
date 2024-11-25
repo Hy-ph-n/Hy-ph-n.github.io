@@ -7,12 +7,12 @@ from flask import render_template
 from DBowenMastery5C import app
 
 @app.route('/')
-@app.route('/home')
-def home():
-    """Renders the home page."""
+@app.route('/index')
+def index():
+    """Renders the index page."""
     return render_template(
-        'home.html',
-        title='Home Page',
+        'index.html',
+        title='Index Page',
         year=datetime.now().year,
     )
 
