@@ -14,10 +14,21 @@
             gap: 40px;
             flex-wrap: wrap;
         }
+
         .video-container video {
             max-width: 100%;
             height: auto;
             width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .video-container {
+                gap: 20px;
+            }
+
+            .jumbotron h1, .jumbotron h2 {
+                font-size: 1.5em;
+            }
         }
     </style>
 </head>
@@ -27,9 +38,9 @@
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
                 <a href="/" class="navbar-brand">My Experience: TSTC</a>
             </div>
@@ -47,22 +58,23 @@
         <h1>The Batman</h1>
         <h2>2009 Cartoon Quiz</h2>
         <p>
-            This is a a unity project where the user views a short clip from the 2009 'The Batman' cartoon. The user is then given a ten-question quiz that can be answered by using the included video.
-            I created the quiz with these theme because I loved watching that cartoon as a child, and it actually served as my introduction to superheroes when I was young.
+            This is a Unity project where the user views a short clip from the 2009 'The Batman' cartoon. The user is then given a ten-question quiz that can be answered using the included video.
+            I created the quiz with this theme because I loved watching that cartoon as a child, and it actually served as my introduction to superheroes when I was young.
             I chose some details that are not too difficult to find in the included video, as I wanted the quiz to not be too frustrating.
 
             The repository for this project can be found <a href="https://github.com/Hy-ph-n/TheBatmanQuiz">here</a>.
         </p>
     </div>
 
-    <video controls>
-        <source src="/static/video/Batman Quiz.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+    <div class="embed-responsive embed-responsive-16by9">
+        <video class="embed-responsive-item" controls>
+            <source src="/static/video/Batman Quiz.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
 
     <script src="/static/scripts/jquery-1.10.2.js"></script>
     <script src="/static/scripts/bootstrap.js"></script>
     <script src="/static/scripts/respond.js"></script>
-
 </body>
 </html>
