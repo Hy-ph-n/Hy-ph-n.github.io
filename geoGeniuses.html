@@ -19,6 +19,16 @@
             height: auto;
             width: 100%;
         }
+
+        @media (max-width: 768px) {
+            .video-container {
+                gap: 20px;
+            }
+
+            .jumbotron h1, .jumbotron h2 {
+                font-size: 1.5em;
+            }
+        }
     </style>
 </head>
 
@@ -46,23 +56,26 @@
     <div class="jumbotron">
         <h1>Geo Geniuses</h1>
         <h2>An interactive program where users interact with an inventory of rocks, minerals, and gemstones</h2>
-        <p>GeoGeniuses is a java program where users acting as customers can view and purchase from an inventory of rocks, minerals, and gemstones.
+        <p>GeoGeniuses is a Java program where users acting as customers can view and purchase from an inventory of rocks, minerals, and gemstones.
            If a user does not have an account, they can act as a guest and still view, but not purchase from, the inventory.
            When viewing the inventory users can decide to limit the number of results by price range, rock type, and name.
 
            Qualified users can act as managers and edit this inventory, edit user information, or edit discounts.
 
-           There is also functionality to create new accounts and reset password if necessary.
+           There is also functionality to create new accounts and reset passwords if necessary.
 
            All purchases, registrations, and the inventory are saved in a personal database.
         
            The repository for this project can be found <a href="https://github.com/Hy-ph-n/GeoGeniuses">here</a>.</p>
     </div>
 
-    <video controls>
-        <source src="/static/video/GeoGeniuses.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+    <!-- Make the video responsive -->
+    <div class="embed-responsive embed-responsive-16by9">
+        <video class="embed-responsive-item" controls>
+            <source src="/static/video/GeoGeniuses.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
 
     <script src="/static/scripts/jquery-1.10.2.js"></script>
     <script src="/static/scripts/bootstrap.js"></script>
